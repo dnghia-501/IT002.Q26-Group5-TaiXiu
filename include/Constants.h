@@ -1,4 +1,6 @@
-// chứa hằng số win rate
+/*
+chứa hằng số win rate và phí giao dịch
+*/
 #include <iostream>
 using namespace std;
 constexpr double WIN_RATE = 0.50;
