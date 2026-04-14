@@ -7,6 +7,7 @@
 using namespace std;
 
 struct Player : public Actor {
+    Bet getBet() const;
     void placeBet();
 
   private:

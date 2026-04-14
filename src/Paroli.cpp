@@ -1,7 +1,11 @@
 #include "../include/Paroli.h"
 #include <cstdlib>
 
-/**/
+/*
+ * @brief
+ * @param
+ * @return
+ * */
 Bet Paroli::calNextBet(BetResult const &prevResult) {
     if (prevResult == BetResult::Win) {
         iConsecutiveWins++;
@@ -21,8 +25,11 @@ Bet Paroli::calNextBet(BetResult const &prevResult) {
 
     return Bet{side, dCurrentBet};
 }
-
-/**/
+/*
+ * @brief
+ * @param
+ * @return
+ * */
 void Paroli::reset() {
     dCurrentBet = dBaseBet;
     iConsecutiveWins = 0;

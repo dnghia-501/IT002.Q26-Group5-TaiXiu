@@ -2,8 +2,10 @@
 #include <cstdlib>
 
 /*
-Hàm tính số Fibonacci bằng vòng lặp
-*/
+ * @brief
+ * @param
+ * @return
+ * */
 int Fibonacci::getFibonacciMultiplier(int n) {
     if (n <= 0)
         return 1;
@@ -18,7 +20,11 @@ int Fibonacci::getFibonacciMultiplier(int n) {
     }
     return c;
 }
-
+/*
+ * @brief
+ * @param
+ * @return
+ * */
 Bet Fibonacci::calNextBet(BetResult const &prevResult) {
     if (prevResult == BetResult::Win) {
         iCurrentIndex -= 2;
@@ -34,7 +40,11 @@ Bet Fibonacci::calNextBet(BetResult const &prevResult) {
 
     return Bet{side, dCurrentBet};
 }
-
+/*
+ * @brief
+ * @param
+ * @return
+ * */
 void Fibonacci::reset() {
     dCurrentBet = dBaseBet;
     iCurrentIndex = 0;

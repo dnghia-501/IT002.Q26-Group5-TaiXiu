@@ -3,6 +3,11 @@
 
 using namespace std;
 
+/*
+ * @brief
+ * @param
+ * @return
+ * */
 Bet Martingale::calNextBet(BetResult const &preResult) {
     if (preResult == BetResult::Win) {
         dCurrentBet = dBaseBet;
