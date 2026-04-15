@@ -2,22 +2,32 @@
 #ifndef SICBOTABLE_H
 #define SICBOTABLE_H
 
+#include <vector>
 #include "Dice.h"
-#include <string>
 
-class SicBoTable {
+class House {
+};
+
+class Player {
+};
+
+class RoundRecord {
+};
+
+class Table {
 private:
-    Dice dices[3]; 
-    int totalScore;
+    std::vector<Dice> dices;
+
+    House house;
+
+    Player player;
+
+    std::vector<RoundRecord> records;
 
 public:
-    SicBoTable();
+    Table();
 
-    void shake();
-
-    int getTotalScore() const;
-
-    std::string getResultString() const;
+    void play();
 };
 
 #endif

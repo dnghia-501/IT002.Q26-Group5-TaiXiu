@@ -1,26 +1,17 @@
 #include "SicboTable.h"
 #include "SicBoTable.h"
+#include<iostream>
 
-SicBoTable::SicBoTable() : totalScore(0) {}
+Table::Table() {
+    dices = std::vector<Dice>(3);
+}
 
-void SicBoTable::shake() {
-    totalScore = 0;
+void Table::play() {
+    int totalScore = 0;
+
     for (int i = 0; i < 3; ++i) {
-        dices[i].roll(); 
-        totalScore += dices[i].getFaceValue();
+        int face = dices[i].roll();
+        totalScore += face;
     }
-}
 
-int SicBoTable::getTotalScore() const {
-    return totalScore;
-}
-
-std::string SicBoTable::getResultString() const {
-    if (totalScore >= 3 && totalScore <= 10) {
-        return "XIU";
-    }
-    else if (totalScore >= 11 && totalScore <= 18) {
-        return "TAI";
-    }
-    return "UNKNOWN";
 }

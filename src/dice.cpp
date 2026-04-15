@@ -1,18 +1,11 @@
-#include "dice.h"
+#include "Dice.h"
 
 Dice::Dice() {
-        std::random_device rd;
+    std::random_device rd;
     rng.seed(rd());
-
-    Value = 1;
 }
 
-void Dice::roll() {
+int Dice::roll() {
     std::uniform_int_distribution<int> dist(1, 6);
-
-    Value = dist(rng);
-}
-
-int Dice::getValue() const {
-    return Value;
+    return dist(rng); 
 }

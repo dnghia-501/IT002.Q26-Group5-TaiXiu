@@ -5,15 +5,12 @@
 
 class Dice {
 private:
-    int Value;
     std::mt19937 rng; 
 
 public:
     Dice();
-    void roll();
 
-    int getValue() const;
+    int roll();
 };
 
 #endif 
-
