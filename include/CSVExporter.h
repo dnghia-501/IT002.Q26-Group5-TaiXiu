@@ -2,10 +2,10 @@
 #include <string>
 #include <vector>
 #include "RoundRecord.h"
-using namespace std;
-class CSVExporter{
-    string filename;
+
+class CSVExporter {
+    std::string sFilename;
 public:
-    CSVExporter(const string& filename);
-    void exportToCSV(const vector<RoundRecord>& records);
+    CSVExporter(const std::string& filename);
+    void exportToCSV(const std::vector<RoundRecord>& records);
 };
