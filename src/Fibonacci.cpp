@@ -46,6 +46,6 @@ Bet Fibonacci::calNextBet(BetResult const &prevResult)
 
 void Fibonacci::reset()
 {
-    currentIndex = 0;
-    dCurrentBet = dBaseBet; // Đừng quên reset cả tiền cược hiện tại
+    ABettingStrategy::reset(); // Gọi hàm của lớp cha để reset tiền
+    this->currentIndex = 0;    // Tự reset thêm biến vị trí của con
 }

@@ -34,6 +34,6 @@ Bet Paroli::calNextBet(BetResult const &prevResult)
 
 void Paroli::reset()
 {
-    dCurrentBet = dBaseBet;
-    consecutiveWins = 0;
+    ABettingStrategy::reset(); // Gọi hàm của lớp cha để reset tiền
+    this->consecutiveWins = 0; // Tự reset thêm biến đếm của lớp con
 }

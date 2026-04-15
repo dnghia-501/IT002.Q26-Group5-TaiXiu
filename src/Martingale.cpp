@@ -21,9 +21,3 @@ Bet Martingale::calNextBet(BetResult const &prevResult)
 
     return Bet(side, dCurrentBet);
 }
-
-// Hàm reset
-void Martingale::reset()
-{
-    dCurrentBet = dBaseBet;
-}
