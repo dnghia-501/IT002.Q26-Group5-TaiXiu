@@ -40,3 +40,19 @@
 # debug information files
 *.dwo
 /.vs
+
+# CMake build directory
+/build/
+
+# CSV output files (generated at runtime)
+*.csv
+
+# Editor & IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temp / notes
+note.txt

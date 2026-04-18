@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.10)
 project(TaiXiuSimulation)
 
 # Sử dụng chuẩn C++14 (hoặc C++17) để hỗ trợ các tính năng hiện đại
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Tự động quét và gom tất cả các file mã nguồn (.cpp) nằm trong thư mục src/ vào một biến tên là SOURCES
