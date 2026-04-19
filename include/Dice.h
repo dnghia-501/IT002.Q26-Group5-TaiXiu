@@ -1,8 +1,6 @@
 #pragma once
 
 struct Dice {
-    /* QA: use default construtor, delete below line ? */
-    Dice();
-
+public:
     int roll();
 };
