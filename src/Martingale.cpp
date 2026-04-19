@@ -1,18 +1,17 @@
 #include "../include/Martingale.h"
-#include <cstdlib> // Dùng cho rand()
+#include <cstdlib>
+
+/* QA: try wording again */
+/* QA: try putitng all comments at the beginning of function/method */
 
 // Gọi trực tiếp Constructor của lớp cha (ABettingStrategy) để nó lưu tiền gốc
 Martingale::Martingale(double baseBet) : ABettingStrategy(baseBet) {}
 
 // Hàm tính cược mới (trả về kiểu Bet)
-Bet Martingale::calNextBet(BetResult const &prevResult)
-{
-    if (prevResult == BetResult::Win)
-    {
+Bet Martingale::calNextBet(BetResult const &prevResult) {
+    if (prevResult == BetResult::Win) {
         dCurrentBet = dBaseBet; // Thắng thì quay về mốc ban đầu
-    }
-    else
-    {
+    } else {
         dCurrentBet *= 2; // Thua thì gấp đôi tiền
     }
 

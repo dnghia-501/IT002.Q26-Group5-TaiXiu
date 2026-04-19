@@ -2,15 +2,13 @@
 
 #include "ABettingStrategy.h"
 
-class Fibonacci : public ABettingStrategy
-{
-private:
+class Fibonacci : public ABettingStrategy {
     int currentIndex;
-    int getFibonacciMultiplier(int n);
+    int getFibonacciMultiplier(int);
 
-public:
+  public:
     Fibonacci(double baseBet);
 
-    Bet calNextBet(BetResult const &prevResult) override;
+    Bet calNextBet(BetResult const &) override;
     void reset() override;
 };

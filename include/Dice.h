@@ -1,7 +1,8 @@
 #pragma once
 
-class Dice {
-public:
+struct Dice {
+    /* QA: use default construtor, delete below line ? */
     Dice();
+
     int roll();
 };

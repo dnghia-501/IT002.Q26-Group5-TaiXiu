@@ -2,16 +2,17 @@
 #include "Actor.h"
 
 class House : public Actor {
-public:
-    House(double commissionRate, double minBet, double maxBet);
-
-    double getCommissionRate() const;
-    double getMinBet()         const;
-    double getMaxBet()         const;
-    double clampBet(double amount) const;
-
-private:
     double dCommissionRate;
     double dMinBet;
     double dMaxBet;
+
+  public:
+    House(double, double, double);
+
+    double getCommissionRate() const;
+    double getMinBet() const;
+    double getMaxBet() const;
+
+    /* QA: what is `clampBet` ? */
+    double clampBet(double) const;
 };
